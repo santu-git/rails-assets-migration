@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.cktext_area :description, ckeditor: { toolbar: 'mini',language: 'us'} %>
   </div>
   <div class="field">
     <%= f.label :featured_image %>
