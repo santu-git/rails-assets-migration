@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @post.featured_image.url(:medium) %>
+<%= image_tag @post.featured_image.variant(resize: "250x250") %>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
