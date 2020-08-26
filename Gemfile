@@ -53,6 +53,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bindex', '0.5.0'
 gem "paperclip", "~> 6.0.0"
-gem 'ckeditor', "4.3.0"
+gem 'ckeditor', '~> 5.1'
 gem 'bootsnap', require: false
 gem "mini_magick"
