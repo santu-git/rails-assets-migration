@@ -15,7 +15,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= image_tag post.featured_image.url(:thumb) %></td>
+        <td><%= image_tag post.featured_image.variant(resize: "250x250") %></td>
         <td><%= post.title %></td>
         <td><%= post.description.html_safe %></td>
         <td><%= link_to 'Show', post %></td>
