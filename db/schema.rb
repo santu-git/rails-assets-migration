@@ -54,10 +54,6 @@ ActiveRecord::Schema.define(version: 2020_08_27_060919) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "featured_image_file_name"
-    t.string "featured_image_content_type"
-    t.integer "featured_image_file_size"
-    t.datetime "featured_image_updated_at"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
