@@ -47,7 +47,8 @@ CKEDITOR.plugins.add( 'eqneditor', {
 		editor.ui.addButton( 'EqnEditor', {
 			label : editor.lang.eqneditor.toolbar,
 			command : pluginCmd,
-			icon: this.path + 'icons/eqneditor.png',
+			icon : '/assets/icons/eqneditor.png',
+			//icon: this.path + 'icons/eqneditor.png',
 			toolbar: 'insert'
 		});
 
@@ -57,7 +58,8 @@ CKEDITOR.plugins.add( 'eqneditor', {
 			editor.addMenuGroup(editor.lang.eqneditor.menu);
 			editor.addMenuItem( 'eqneditor', {
 				label : editor.lang.eqneditor.edit,
-				icon : this.path + 'icons/eqneditor.png',
+				//icon : this.path + 'icons/eqneditor.png',
+				icon : '/assets/icons/eqneditor.png',
 				command : pluginCmd,
 				group : editor.lang.eqneditor.menu
 			});

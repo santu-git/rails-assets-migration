@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require ckeditor/init
+//= require ckeditor/plugins/eqneditor/plugin 
+//= require ckeditor/plugins/eqneditor/lang/en
 //= require_tree .

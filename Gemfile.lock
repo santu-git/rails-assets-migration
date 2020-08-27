@@ -48,9 +48,8 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.0.0)
-    ckeditor (4.3.0)
+    ckeditor (5.1.0)
       orm_adapter (~> 0.5.0)
-      terrapin
     climate_control (0.2.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -188,7 +187,7 @@ DEPENDENCIES
   bindex (= 0.5.0)
   bootsnap (>= 1.1.0)
   byebug (= 11.0.0)
-  ckeditor (= 4.3.0)
+  ckeditor
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
