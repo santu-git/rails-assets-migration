@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_organization
+  before_action :set_s3_service
+  # before_action :set_bucket, only: [:create, :edit, :update, :new]
   # GET /posts
   # GET /posts.json
   def index
@@ -65,6 +67,10 @@ class PostsController < ApplicationController
   private
     def set_organization
       @organization = Organization.find(params[:organization_id])
+    end
+
+    def set_s3_service
+      s3_service.set_bucket(@organization.bucket_name)
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_post
