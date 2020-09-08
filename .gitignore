@@ -19,3 +19,5 @@
 public/system
 public/upload
 public/ckeditor_assets
+storage
+paperclip_assets
