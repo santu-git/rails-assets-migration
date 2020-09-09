@@ -90,7 +90,14 @@ def migrate(from, to, organization)
     end
     ck_blobs.flatten.each do |ck_blob|
       begin
-        migrate_blob(ck_blob.blob)
+        p ck_blob.blob
+        print '.'
+        file = Tempfile.new("file#{Time.now}")
+        file.binmode
+        file << ck_blob.blob.download
+        file.rewind
+        checksum = ck_blob.blob.checksum
+        to_service.upload(ck_blob.blob.key, file, checksum: checksum)
       rescue Errno::ENOENT
         puts "Rescued by Errno::ENOENT statement. ID: #{ck_blob.blob.id} / Key: #{ck_blob.blob.key}"
         next
@@ -100,7 +107,14 @@ def migrate(from, to, organization)
       end
     end
     begin
-      migrate_blob(post.featured_image.blob)
+      p post.featured_image.blob
+      print '.'
+      file = Tempfile.new("file#{Time.now}")
+      file.binmode
+      file << post.featured_image.blob.download
+      file.rewind
+      checksum = post.featured_image.blob.checksum
+      to_service.upload(post.featured_image.blob.key, file, checksum: checksum)
     rescue Errno::ENOENT
       puts "Rescued by Errno::ENOENT statement. ID: #{ck_blob.blob.id} / Key: #{ck_blob.blob.key}"
       next
